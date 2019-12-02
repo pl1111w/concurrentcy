@@ -10,7 +10,9 @@ public class ThreadLocalController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public Long test() {
+    public Long test()
+    {
+        /**实时取出来ThreadLocal【存放过】的数据**/
         return RequestHolder.getId();
     }
 }
