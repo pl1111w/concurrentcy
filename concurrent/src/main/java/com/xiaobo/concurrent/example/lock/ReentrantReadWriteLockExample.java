@@ -45,7 +45,7 @@ public class ReentrantReadWriteLockExample {
         }
     }
 
-    class Data {
+    private class Data {
 
     }
 
