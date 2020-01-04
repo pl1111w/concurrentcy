@@ -1,4 +1,4 @@
-package com.xiaobo.concurrent.example.BlockingQueue;
+package com.xiaobo.concurrent.example.blockingQueue;
 
 import java.util.Iterator;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.xiaobo.concurrent.example.BlockingQueue;
+package com.xiaobo.concurrent.example.blockingQueue;
 
 import lombok.extern.slf4j.Slf4j;
 
