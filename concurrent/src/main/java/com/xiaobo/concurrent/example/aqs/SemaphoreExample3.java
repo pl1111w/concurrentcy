@@ -21,7 +21,7 @@ public class SemaphoreExample3 {
             final int threadNum = i;
             exec.execute(() -> {
                 try {
-                    if(semaphore.tryAcquire()){ //尝试获取许可，一个有三个获取到，由于test睡眠一秒，其他线程尝试获取失败
+                    if (semaphore.tryAcquire()) { //尝试获取许可，一个有三个获取到，由于test睡眠一秒，其他线程尝试获取失败
                         test(threadNum);
                         semaphore.release();
                     }

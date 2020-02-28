@@ -26,7 +26,7 @@ public class FutureExample {
             log.info("run main method..");
             Thread.sleep(1000);
             String result = future.get();
-            log.info("result:{}",result);
+            log.info("result:{}", result);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

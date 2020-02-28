@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class CyclicBarrierExample3 {
 
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5,()->{
+    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(5, () -> {
         log.info("running...");
     });
 
@@ -37,7 +37,7 @@ public class CyclicBarrierExample3 {
             Thread.sleep(1000);
             log.info(threadNum + " is ready");
             cyclicBarrier.await();
-            log.info(threadNum+" begin race ...");
+            log.info(threadNum + " begin race ...");
         } catch (BrokenBarrierException e) {
             e.printStackTrace();
         }

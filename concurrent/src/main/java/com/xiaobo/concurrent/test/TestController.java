@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-   private final Logger logger = LoggerFactory.getLogger(TestController.class);
+    private final Logger logger = LoggerFactory.getLogger(TestController.class);
 
-   @GetMapping("/test")
-   public String printTestInfo(){
-       logger.info("test");
-       return"Test";
-   }
+    @GetMapping("/test")
+    public String printTestInfo() {
+        logger.info("test");
+        return "Test";
+    }
 }

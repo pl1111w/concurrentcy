@@ -12,12 +12,13 @@ import com.xiaobo.concurrent.annotations.ThreadSafe;
  * **/
 public class singletonExample5 {
 
-    private singletonExample5(){
+    private singletonExample5() {
         //逻辑
     }
+
     private static singletonExample5 instance = new singletonExample5();
 
-    public static singletonExample5 getInstance(){
+    public static singletonExample5 getInstance() {
         return instance;
     }
 }

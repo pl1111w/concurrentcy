@@ -9,6 +9,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+
 @Slf4j
 @NotThreadSafe
 public class DateTimeFormatExample1 {
@@ -40,10 +41,11 @@ public class DateTimeFormatExample1 {
         countDownLatch.await();
         executorService.shutdown();
     }
-    public static void update(){
+
+    public static void update() {
         try {
             dateFormat.parse("20191203");
-            log.info("【Date】:"+dateFormat.parse("20191203"));
+            log.info("【Date】:" + dateFormat.parse("20191203"));
         } catch (ParseException e) {
             e.printStackTrace();
         }

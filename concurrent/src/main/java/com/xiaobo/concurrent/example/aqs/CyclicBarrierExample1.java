@@ -35,7 +35,7 @@ public class CyclicBarrierExample1 {
             Thread.sleep(1000);
             log.info(threadNum + " is ready");
             cyclicBarrier.await();
-            log.info(threadNum+" begin race ...");
+            log.info(threadNum + " begin race ...");
         } catch (BrokenBarrierException e) {
             e.printStackTrace();
         }

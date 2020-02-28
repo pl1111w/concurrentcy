@@ -1,11 +1,13 @@
 package com.xiaobo.concurrent.example.blockingQueue;
+
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
+
 public class BlockingDequeExample {
 
     public static void main(String[] args) {
         BlockingDeque<Integer> deque = new LinkedBlockingDeque<Integer>(5);
-        Runnable producer = new Producer("producer",deque);
+        Runnable producer = new Producer("producer", deque);
         Runnable consumer = new Consumer("Consumer", deque);
         new Thread(producer).start();
         try {
@@ -16,6 +18,7 @@ public class BlockingDequeExample {
 
         new Thread(consumer).start();
     }
+
     static class Producer implements Runnable {
         private String name;
 

@@ -6,7 +6,9 @@ public class singletonExample3 {
     //1.2、ctorInstance()初始化对象
     //1.3、instance = ctorInstance()//设置instance指向刚分配的内存
 
-    /**指令重排顺序如下：**/
+    /**
+     * 指令重排顺序如下：
+     **/
     //【1】、memory = allocate()分配对象内存空间
     //【3】、ctorInstance()初始化对象
     //【2】、instance = ctorInstance()//设置instance指向刚分配的内存

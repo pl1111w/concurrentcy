@@ -9,14 +9,15 @@ import lombok.extern.slf4j.Slf4j;
 @NotRecommend
 public class Escape {
 
-    private int escape =0;
+    private int escape = 0;
 
-    public Escape(){
+    public Escape() {
         new InnerClass();
     }
-    private class InnerClass{
-        public InnerClass(){
-            log.info("{}",Escape.this.escape);
+
+    private class InnerClass {
+        public InnerClass() {
+            log.info("{}", Escape.this.escape);
         }
     }
 

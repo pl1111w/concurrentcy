@@ -3,6 +3,7 @@ package com.xiaobo.concurrent.example.blockingQueue;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.BlockingQueue;
+
 @Slf4j
 public class Producer_Array implements Runnable {
 
@@ -22,8 +23,8 @@ public class Producer_Array implements Runnable {
                 element++;
             }
         } catch (Exception e) {
-           log.error("生产者在等待空闲空间的时候被打断了！");
-           log.error("Exception:",e);
+            log.error("生产者在等待空闲空间的时候被打断了！");
+            log.error("Exception:", e);
         }
         log.info("生产者已经终止了生产过程！");
     }

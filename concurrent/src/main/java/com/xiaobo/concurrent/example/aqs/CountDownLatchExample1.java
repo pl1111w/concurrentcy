@@ -18,12 +18,12 @@ public class CountDownLatchExample1 {
 
         final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
 
-        for (int i = 0; i < threadCount; i++){
+        for (int i = 0; i < threadCount; i++) {
             final int threadNum = i;
-            executorService.execute(()->{
+            executorService.execute(() -> {
                 try {
                     //假设test计算很复杂，分成200个线程进行计算
-                   test(threadNum);
+                    test(threadNum);
                 } catch (Exception e) {
                     log.error("exception", e);
                 } finally {
@@ -38,8 +38,8 @@ public class CountDownLatchExample1 {
 
     }
 
-    public static void test (int i) throws InterruptedException {
-       Thread.sleep(100);
-       log.info("i="+i);//此行代表复杂的计算
+    public static void test(int i) throws InterruptedException {
+        Thread.sleep(100);
+        log.info("i=" + i);//此行代表复杂的计算
     }
 }

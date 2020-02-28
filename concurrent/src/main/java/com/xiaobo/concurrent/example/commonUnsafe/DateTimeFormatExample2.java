@@ -39,12 +39,13 @@ public class DateTimeFormatExample2 {
         countDownLatch.await();
         executorService.shutdown();
     }
-    public static void update(){
+
+    public static void update() {
         try {
             //堆栈封闭
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
             dateFormat.parse("20191203");
-            log.info("【Date】:"+dateFormat.parse("20191203").toString());
+            log.info("【Date】:" + dateFormat.parse("20191203").toString());
         } catch (ParseException e) {
             e.printStackTrace();
         }

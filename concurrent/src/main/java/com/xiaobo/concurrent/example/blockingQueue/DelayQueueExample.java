@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class DelayQueueExample {
 
     private static final int studentNumber = 20;
+
     public static void main(String[] args) throws InterruptedException {
 
         CountDownLatch countDownLatch = new CountDownLatch(studentNumber + 1);

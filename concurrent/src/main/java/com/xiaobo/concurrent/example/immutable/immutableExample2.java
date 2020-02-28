@@ -20,6 +20,6 @@ public class immutableExample2 {
             .put(1, 2).put(3, 4).put(5, 6).build();
 
     public static void main(String[] args) {
-        log.info("{}",map.get(1));
+        log.info("{}", map.get(1));
     }
 }

@@ -6,10 +6,12 @@ import org.assertj.core.util.Maps;
 
 import java.util.Collections;
 import java.util.Map;
+
 @Slf4j
 @NotThreadSafe
 public class immutableExample1 {
-    private static Map<Integer, Integer> map = Maps.newHashMap(1,1);
+    private static Map<Integer, Integer> map = Maps.newHashMap(1, 1);
+
     static {
         map.put(1, 2);
         map.put(3, 4);

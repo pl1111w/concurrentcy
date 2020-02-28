@@ -9,7 +9,7 @@ import java.util.concurrent.BlockingQueue;
 public class ArrayBlockingQueueExample {
     public static void main(String[] args) {
 
-        BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<Integer>(3,true);
+        BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<Integer>(3, true);
        /* Producer producer = new Producer(blockingQueue);
         Consumer consumer = new Consumer(blockingQueue);
         producer.run();
@@ -21,7 +21,7 @@ public class ArrayBlockingQueueExample {
         Thread producer_Array = new Thread(producerArray);
         producer_Array.start();
         Consumer_Array consumerArray = new Consumer_Array(blockingQueue);
-        Thread Consumer_Array =  new Thread(consumerArray);
+        Thread Consumer_Array = new Thread(consumerArray);
         Consumer_Array.start();
         try {
             Consumer_Array.sleep(1000);

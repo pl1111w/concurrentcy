@@ -2,8 +2,10 @@ package com.xiaobo.concurrent.example.lock;
 
 import java.util.concurrent.locks.StampedLock;
 
-/**源码分析类**/
-public class StampedLockExample  {
+/**
+ * 源码分析类
+ **/
+public class StampedLockExample {
 
     class Point {
         private double x, y;

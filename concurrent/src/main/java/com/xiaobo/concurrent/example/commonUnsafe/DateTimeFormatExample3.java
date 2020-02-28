@@ -41,7 +41,8 @@ public class DateTimeFormatExample3 {
         countDownLatch.await();
         executorService.shutdown();
     }
-    public static void update(){
-       log.info("[joda.time]"+dateTimeFormatter.parseDateTime("20191203").toDate());
+
+    public static void update() {
+        log.info("[joda.time]" + dateTimeFormatter.parseDateTime("20191203").toDate());
     }
 }

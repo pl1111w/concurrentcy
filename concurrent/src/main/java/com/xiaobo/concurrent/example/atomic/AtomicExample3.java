@@ -20,8 +20,10 @@ public class AtomicExample3 {
     // 同时并发执行的线程数
     public static int threadTotal = 200;
 
-    /**当请求数量太多时，atomic判断修改的成功性降低，程序性能会受到影响
-     * longAdder(hash算法单点变多点，统计时有并非更新可能有误差)性能优于atomic**/
+    /**
+     * 当请求数量太多时，atomic判断修改的成功性降低，程序性能会受到影响
+     * longAdder(hash算法单点变多点，统计时有并非更新可能有误差)性能优于atomic
+     **/
     public static LongAdder count = new LongAdder();
 
     private static final Logger logger = LoggerFactory.getLogger(ConcurrencyTest.class);
@@ -31,7 +33,7 @@ public class AtomicExample3 {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
-        for (int i = 0; i < clientTotal ; i++) {
+        for (int i = 0; i < clientTotal; i++) {
             executorService.execute(() -> {
                 try {
                     semaphore.acquire();

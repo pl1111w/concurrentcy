@@ -24,8 +24,8 @@ public class StringExample2 {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
-        for (int i = 0; i < clientTotal ; i++) {
-            executorService.execute(()->{
+        for (int i = 0; i < clientTotal; i++) {
+            executorService.execute(() -> {
                 try {
                     semaphore.acquire();
                     update();
@@ -41,6 +41,7 @@ public class StringExample2 {
         log.info("size:{}", stringBuffer.length());
 
     }
+
     private static void update() {
         stringBuffer.append("1");
     }

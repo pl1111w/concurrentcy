@@ -22,12 +22,12 @@ public class AtomicExample5 {
 
         AtomicExample5 atomicExample5 = new AtomicExample5();
         if (updater.compareAndSet(atomicExample5, 100, 120)) {
-            logger.info("compareAndSet succeed!"+atomicExample5.count);
+            logger.info("compareAndSet succeed!" + atomicExample5.count);
         }
         if (updater.compareAndSet(atomicExample5, 100, 120)) {
-            logger.info("compareAndSet succeed!"+atomicExample5.count);
+            logger.info("compareAndSet succeed!" + atomicExample5.count);
         } else {
-            logger.info("compareAndSet failed!"+atomicExample5.count);
+            logger.info("compareAndSet failed!" + atomicExample5.count);
         }
 
     }

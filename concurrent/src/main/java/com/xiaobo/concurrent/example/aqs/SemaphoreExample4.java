@@ -25,7 +25,7 @@ public class SemaphoreExample4 {
                     /**同一个线程一下子获取三个许可,所以每次只有一个线程可以进入，
                      * 线程执行完释放这三个许可，下一个线程再次尝试获取三个许可，
                      * 累计5秒，test方法每次睡眠一秒，故只有5个线程执行完**/
-                    if(semaphore.tryAcquire(3,5000,TimeUnit.MILLISECONDS)){ //尝试获取许可，一个有三个获取到，由于test睡眠一秒，其他线程尝试获取失败
+                    if (semaphore.tryAcquire(3, 5000, TimeUnit.MILLISECONDS)) { //尝试获取许可，一个有三个获取到，由于test睡眠一秒，其他线程尝试获取失败
                         test(threadNum);
                         semaphore.release(3);
                     }

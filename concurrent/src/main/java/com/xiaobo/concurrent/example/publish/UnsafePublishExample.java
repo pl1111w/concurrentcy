@@ -18,10 +18,10 @@ public class UnsafePublishExample {
 
     public static void main(String[] args) {
         UnsafePublishExample example = new UnsafePublishExample();
-        log.info("states{}:",Arrays.toString(example.getStates()));
+        log.info("states{}:", Arrays.toString(example.getStates()));
 
-        example.getStates()[0]="d";
-        log.info("states{}:",Arrays.toString(example.getStates()));
+        example.getStates()[0] = "d";
+        log.info("states{}:", Arrays.toString(example.getStates()));
 
     }
 }

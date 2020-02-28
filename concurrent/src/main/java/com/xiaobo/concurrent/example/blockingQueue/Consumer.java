@@ -3,6 +3,7 @@ package com.xiaobo.concurrent.example.blockingQueue;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.BlockingQueue;
+
 @Slf4j
 public class Consumer implements Runnable {
     private BlockingQueue blockingQueue = null;
@@ -13,6 +14,6 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        log.info("消费一个元素:"+blockingQueue.remove());
+        log.info("消费一个元素:" + blockingQueue.remove());
     }
 }
