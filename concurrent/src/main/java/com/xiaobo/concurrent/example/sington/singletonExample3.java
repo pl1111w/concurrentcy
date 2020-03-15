@@ -1,5 +1,8 @@
 package com.xiaobo.concurrent.example.sington;
 
+import com.xiaobo.concurrent.annotations.NotThreadSafe;
+
+@NotThreadSafe
 public class singletonExample3 {
 
     //1.1、memory = allocate()分配对象内存空间
