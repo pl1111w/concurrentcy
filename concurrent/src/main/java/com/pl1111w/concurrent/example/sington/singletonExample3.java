@@ -21,6 +21,7 @@ public class singletonExample3 {
 
     private static singletonExample3 instance = null;
 
+    //DCL(double check lock)
     public static singletonExample3 getInstance() {
         if (instance == null) {   //线程B 此时线程A进行到3，B判断不为空直接return,对象初始化的数据没有return出去
             synchronized (singletonExample3.class) {
