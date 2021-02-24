@@ -4,6 +4,7 @@ import com.pl1111w.concurrent.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -21,6 +22,7 @@ public class ArrayListExample {
     public static int threadTotal = 200;
 
     private static List<Integer> list = new ArrayList<>();
+//    private static List<Integer> safeList = Collections.synchronizedList(new ArrayList<>());
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();

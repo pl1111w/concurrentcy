@@ -5,7 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 import java.util.concurrent.*;
-
+/***
+ * 写时（加锁）复制，每次修改copy并扩容+1；加在list最后，写回list
+ * 读写分离
+ * **/
 @Slf4j
 @ThreadSafe
 public class CopyOnWriteArrayListExample {
