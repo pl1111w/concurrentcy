@@ -46,6 +46,7 @@ public class ReentrantReadWriteLockExample {
                 example.get(tempInt.toString());
             });
         }
+        executorService.shutdown();
     }
 
 
