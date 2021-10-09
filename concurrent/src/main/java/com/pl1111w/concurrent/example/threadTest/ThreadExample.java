@@ -11,6 +11,7 @@ public class ThreadExample {
     public static void main(String[] args) {
 
         A a = new A();
+        a.setName("Thread_0001");
 
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + " " + i);
