@@ -6,10 +6,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class ThreadPoolExample2 {
-    public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(4);
+public class CachedThreadPoolExample {
+    /**
+     * maximumPoolSize： 最大线程数为Integer.MAX_VALUE 线程创建过多导致oom
+     */
 
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newCachedThreadPool();
         for (int i = 0; i < 10; i++) {
             final int index = i;
             executorService.execute(new Runnable() {
@@ -20,5 +23,6 @@ public class ThreadPoolExample2 {
             });
         }
         executorService.shutdown();
+
     }
 }

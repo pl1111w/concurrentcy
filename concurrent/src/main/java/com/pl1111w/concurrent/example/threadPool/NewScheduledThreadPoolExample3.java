@@ -7,8 +7,12 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class ThreadPoolExample3 {
+public class NewScheduledThreadPoolExample3 {
     public static void main(String[] args) {
+
+        /**
+         * maximumPoolSize： 最大线程数为Integer.MAX_VALUE 线程创建过多导致oom
+         */
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
         for (int i = 0; i < 10; i++) {
             executorService.schedule(new Runnable() {
