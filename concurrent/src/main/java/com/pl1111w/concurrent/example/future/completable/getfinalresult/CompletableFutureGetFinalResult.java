@@ -36,8 +36,8 @@ public class CompletableFutureGetFinalResult {
 //        System.out.println("get time out: "+noFeedbackFuture.get(1, TimeUnit.SECONDS));//过时不候 抛出timeout异常
 //        System.out.println(noFeedbackFuture.getNow(999));//获取结果时 没计算法完毕直接返回999
         if (noFeedbackFuture.complete(11)) {//判断是否计算完毕
-            TimeUnit.SECONDS.sleep(5);
-            System.out.println("没有等到最终结果");
+            TimeUnit.SECONDS.sleep(1);
+            System.out.println("没有等到最终结果："+ noFeedbackFuture.get());
         } else {
             System.out.println(noFeedbackFuture.get());
         }
