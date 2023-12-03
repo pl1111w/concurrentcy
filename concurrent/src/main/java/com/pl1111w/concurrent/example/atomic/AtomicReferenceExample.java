@@ -5,7 +5,7 @@ import com.pl1111w.concurrent.annotations.ThreadSafe;
 import java.util.concurrent.atomic.AtomicReference;
 
 @ThreadSafe
-public class AtomicExample4 {
+public class AtomicReferenceExample {
 
     private static AtomicReference<Integer> count = new AtomicReference<>(0);
 

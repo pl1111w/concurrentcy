@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  * @author: Kris
  * @date 2021/2/23 21:44
  */
-public class AtomicABAProblemExample {
+public class AtomicStampedReferenceExample {
 
     /**
      * 不带时间戳

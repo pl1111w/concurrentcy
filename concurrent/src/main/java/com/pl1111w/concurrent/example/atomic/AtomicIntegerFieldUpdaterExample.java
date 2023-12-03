@@ -8,19 +8,21 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 @ThreadSafe
-public class AtomicExample5 {
+public class AtomicIntegerFieldUpdaterExample {
 
     @Getter
     public volatile int count = 100;
 
-    private static final Logger logger = LoggerFactory.getLogger(AtomicExample5.class);
+    private static final Logger logger = LoggerFactory.getLogger(AtomicIntegerFieldUpdaterExample.class);
 
 
     public static void main(String[] args) {
         /**更新某个类的字段值**/
-        AtomicIntegerFieldUpdater<AtomicExample5> updater = AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
+        AtomicIntegerFieldUpdater<AtomicIntegerFieldUpdaterExample> updater =
+                AtomicIntegerFieldUpdater.newUpdater(
+                        AtomicIntegerFieldUpdaterExample.class, "count");
 
-        AtomicExample5 atomicExample5 = new AtomicExample5();
+        AtomicIntegerFieldUpdaterExample atomicExample5 = new AtomicIntegerFieldUpdaterExample();
         if (updater.compareAndSet(atomicExample5, 100, 120)) {
             logger.info("compareAndSet succeed!" + atomicExample5.count);
         }
