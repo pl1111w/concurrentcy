@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class CachedThreadPoolExample {
+public class NewCachedThreadPoolExample {
     /**
      * maximumPoolSize： 最大线程数为Integer.MAX_VALUE 线程创建过多导致oom
      */

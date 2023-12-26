@@ -6,3 +6,9 @@
 最佳线程数：
 io密集：(io_time+cpu_time)/cpu_time * cpu_num
 非io密集：1 + cpu_num
+
+拒绝策略（前两种常用）：
+1、直接抛异常（默认）
+2、调用executor的线程调用run方法
+3、丢弃最老的任务，最前面的任务
+4、什么都不做
