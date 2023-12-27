@@ -1,6 +1,5 @@
 package com.pl1111w.concurrent.example.lock;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantLock;
@@ -17,7 +16,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLocksExample {
 
-    ReentrantLock reentrantLock = new ReentrantLock();
+    ReentrantLock reentrantLock = new ReentrantLock();//默认 Nonfair
 
     public static void main(String[] args) {
         ReentrantLocksExample example = new ReentrantLocksExample();
@@ -45,7 +44,7 @@ public class ReentrantLocksExample {
     public void getReentrant() {
         try {
             reentrantLock.lock();
-            System.out.println(Thread.currentThread().getId() + " method setReentrant");
+            System.out.println(Thread.currentThread().getId() + " method getReentrant");
             setReentrant();
         } finally {
             reentrantLock.unlock();
